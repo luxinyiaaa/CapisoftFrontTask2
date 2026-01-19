@@ -28,6 +28,7 @@ const config = defineConfig({
           100: { value: "#F0F0F0" }, // bg.surface / border.default
           900: { value: "#0D0D0D" }, // text.primary
           600: { value: "#808080" }, // text.muted
+          150: { value: "#F7F8FB" }, //dashboar background bg.dashboard
         },
       },
     },
@@ -45,6 +46,9 @@ const config = defineConfig({
         },
         "bg.surface": {
           value: { base: "{colors.gray.100}", _dark: "#1A1A1A" },
+        },
+        "bg.dashboard": {
+          value: { base: "colors.gray.150", _dark: "#0F172A" },
         },
         "text.primary": {
           value: { base: "{colors.gray.900}", _dark: "#FFFFFF" },
