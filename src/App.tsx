@@ -4,6 +4,7 @@ import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage";
 import PrivateRoute from "@/routes/PrivateRoute";
 import DashboardPage from "./pages/Dashboard";
+import ProductPage from "./pages/Products";
 
 function App() {
   return (
@@ -16,6 +17,14 @@ function App() {
         element={
           <PrivateRoute>
             <DashboardPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/products"
+        element={
+          <PrivateRoute>
+            <ProductPage />
           </PrivateRoute>
         }
       />

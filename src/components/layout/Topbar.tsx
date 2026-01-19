@@ -51,7 +51,7 @@ export function Topbar({ onOpenMenu }: TopbarProps) {
     >
       <Flex
         w="full"
-        h={{ base: "56px", md: "72px" }}
+        h={{ base: "56px", md: "62px" }}
         align="center"
         justify="space-between"
         px={{ base: 3, md: 6 }}
@@ -66,15 +66,6 @@ export function Topbar({ onOpenMenu }: TopbarProps) {
           >
             <FiMenu />
           </IconButton>
-
-          {/* 如果你不想显示标题，就删掉这一段 */}
-          {/* <Text
-            fontSize={{ base: "md", md: "lg" }}
-            fontWeight="semibold"
-            lineClamp={1}
-          >
-            {title ?? "Dashboard"}
-          </Text> */}
         </HStack>
 
         {/* 右侧：Theme + 用户下拉 */}

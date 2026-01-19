@@ -14,7 +14,7 @@ export function AppLayout({ title, children }: AppLayoutProps) {
   return (
     <Flex minH="100vh" bg="bg.subtle" w="full">
       {/* Desktop Sidebar */}
-      <Box w="260px" display={{ base: "none", md: "block" }} flexShrink={0}>
+      <Box w="190px" display={{ base: "none", md: "block" }} flexShrink={0}>
         <Sidebar />
       </Box>
 

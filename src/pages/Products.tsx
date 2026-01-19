@@ -1,17 +1,23 @@
 import { AppLayout } from "@/components/layout/AppLayout";
-import { Box } from "@chakra-ui/react";
+import { ProductsHeader } from "@/components/products/ProductsHeader";
+import { ProductsContent } from "@/components/products/ProductsContent";
+import { Box, VStack } from "@chakra-ui/react";
+import { useState } from "react";
 
-export default function ProductPage() {
+export type ProductsViewMode = "grid" | "list";
+
+export default function ProductsPage() {
+  const [view, setView] = useState<ProductsViewMode>("grid");
+
   return (
     <AppLayout title="Products">
-      {/* 1) 整页背景：占满高度 */}
       <Box bg="bg.dashboard" minH="dvh" w="full">
-        {/* 2) 响应式内边距：手机小一点，桌面大一点 */}
         <Box px={{ base: 4, md: 6 }} py={{ base: 4, md: 6 }}>
-          {/* 3) 内容最大宽度：不是写死宽度，是“上限” */}
           <Box w="full" maxW={{ base: "full", xl: "1200px" }} mx="auto">
-            {/* 4) 行间距：响应式 */}
-            contetent
+            <VStack align="stretch" gap={{ base: 4, md: 6 }}>
+              <ProductsHeader view={view} onChangeView={setView} />
+              <ProductsContent view={view} />
+            </VStack>
           </Box>
         </Box>
       </Box>
