@@ -5,6 +5,8 @@ import RegisterPage from "@/pages/RegisterPage";
 import PrivateRoute from "@/routes/PrivateRoute";
 import DashboardPage from "./pages/Dashboard";
 import ProductPage from "./pages/Products";
+import UsersPage from "@/pages/User";
+import AdminsPage from "@/pages/Admin";
 
 function App() {
   return (
@@ -25,6 +27,22 @@ function App() {
         element={
           <PrivateRoute>
             <ProductPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/users"
+        element={
+          <PrivateRoute>
+            <UsersPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/admins"
+        element={
+          <PrivateRoute>
+            <AdminsPage />
           </PrivateRoute>
         }
       />

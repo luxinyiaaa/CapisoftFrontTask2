@@ -55,7 +55,7 @@ export function UserOverviewChart() {
             cursor={{ fill: "transparent" }}
             content={<BlackTooltip />}
           />
-          <Bar dataKey="newClients" barSize={18} radius={[10, 10, 10, 10]}>
+          <Bar dataKey="newClients" barSize={18} radius={[10, 10, 0, 0]}>
             {data.map((d) => (
               <Cell
                 key={d.day}

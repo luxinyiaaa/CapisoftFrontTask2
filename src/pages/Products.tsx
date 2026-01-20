@@ -13,7 +13,7 @@ export default function ProductsPage() {
     <AppLayout title="Products">
       <Box bg="bg.dashboard" minH="dvh" w="full">
         <Box px={{ base: 4, md: 6 }} py={{ base: 4, md: 6 }}>
-          <Box w="full" maxW={{ base: "full", xl: "1200px" }} mx="auto">
+          <Box w="full" maxW={{ base: "full" }} mx="auto">
             <VStack align="stretch" gap={{ base: 4, md: 6 }}>
               <ProductsHeader view={view} onChangeView={setView} />
               <ProductsContent view={view} />

@@ -17,17 +17,13 @@ import icon4 from "@/assets/dashboard/icon4.svg";
 
 import { CardShell } from "@/components/dashboard/CardShell";
 
-/* ================= CardShell（合并在本文件） ================= */
-
-/* ================= Dashboard Row 2 ================= */
-
 export function DashboardRow2() {
   return (
     <Grid
       templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
       gap={{ base: 4, md: 6 }}
     >
-      {/* ---------- Left: User Overview ---------- */}
+      {/* Left: User Overview */}
       <GridItem minW={0}>
         <CardShell>
           <Flex justify="space-between" mb={4}>
@@ -35,11 +31,11 @@ export function DashboardRow2() {
               <Text fontSize="xl" fontWeight="semibold">
                 User Overview
               </Text>
-              <Text fontSize="sm" color="fg.muted">
+              <Text fontSize="sm" color="text.muted">
                 +25% compared to last 30 days
               </Text>
             </Box>
-            <Badge variant="outline" px={3} py={1} borderRadius="md">
+            <Badge variant="outline" px={3} py={1} borderRadius="input">
               This Week ▾
             </Badge>
           </Flex>
@@ -69,7 +65,7 @@ export function DashboardRow2() {
         </CardShell>
       </GridItem>
 
-      {/* ---------- Right: Revenue Overview ---------- */}
+      {/*Right: Revenue Overview */}
       <GridItem minW={0}>
         <CardShell>
           <Flex justify="space-between" mb={4}>
@@ -81,7 +77,7 @@ export function DashboardRow2() {
                 +25% compared to last 30 days
               </Text>
             </Box>
-            <Badge variant="outline" px={3} py={1} borderRadius="md">
+            <Badge variant="outline" px={3} py={1} borderRadius="input">
               This Year ▾
             </Badge>
           </Flex>

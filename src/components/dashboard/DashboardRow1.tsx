@@ -11,9 +11,8 @@ function WelcomeCard() {
   return (
     <Surface p={0} overflow="hidden" h="full">
       <HStack h="full" gap={{ base: 4, md: 6 }} align="center">
-        {/* 插画占位：先别写死尺寸，用响应式 */}
         <Box
-          flex={{ base: "0 0 40%", md: "0 0 42%" }} // 左侧占比：按你Figma感觉可调 38~45%
+          flex={{ base: "0 0 40%", md: "0 0 42%" }}
           minW={{ base: "140px", md: "180px" }} // 防止太窄
         >
           <Image
@@ -49,7 +48,7 @@ export function DashboardRow1() {
     >
       <WelcomeCard />
 
-      {/* ✅ 自适应：手机 1 列，>= sm 2 列（自动变 2x2） */}
+      {/* 手机 1 列，>= sm 2 列（自动变 2x2） */}
       <SimpleGrid columns={{ base: 1, sm: 2 }} gap={{ base: 3, md: 4 }}>
         <StatCard
           label="Yearly Earnings"

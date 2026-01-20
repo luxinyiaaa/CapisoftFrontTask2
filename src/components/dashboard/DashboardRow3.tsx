@@ -91,12 +91,12 @@ function PeopleList({ items }: { items: Person[] }) {
           align={{ base: "flex-start", md: "center" }}
           justify="space-between"
           gap={3}
-          wrap={{ base: "wrap", md: "nowrap" }}
+          wrap={{ base: "wrap", md: "wrap" }}
         >
           <HStack gap={3} minW={0} flex="1">
             <MiniAvatar src={p.avatar} />
 
-            <Box minW={0}>
+            <Box minW={0} flex="1">
               <Text fontWeight="medium">{p.name}</Text>
               <Text fontSize="sm" color="text.muted">
                 {p.company}
@@ -108,7 +108,7 @@ function PeopleList({ items }: { items: Person[] }) {
             fontSize="sm"
             color="text.muted"
             flexShrink={0}
-            w={{ base: "full", md: "auto" }} // ✅ 小屏另起一行
+            w={{ base: "full", md: "auto" }} //  小屏另起一行
             textAlign={{ base: "left", md: "right" }}
           >
             {p.listing}
@@ -125,7 +125,8 @@ function TopAdminCard() {
       <SectionHeader title="Top Admin" />
 
       <Flex
-        direction={{ base: "column", md: "row" }}
+        direction="row"
+        wrap="wrap"
         gap={4}
         align={{ base: "stretch", md: "center" }}
       >
@@ -157,7 +158,7 @@ function TopAdminCard() {
         </HStack>
 
         {/* 右：指标 + 按钮 */}
-        <VStack align="stretch" gap={3} flex="1" minW={0}>
+        <VStack align="stretch" gap={3} flex="1" minW="100px">
           <Flex
             align="center"
             justify="space-between"

@@ -32,7 +32,6 @@ export function ProductRow({
       gap={{ base: 3, md: 6 }}
       minW={0}
     >
-      {/* 左侧：图 + 文本 + badge */}
       <HStack gap={4} minW={0} flex="1">
         <Image
           src={imageUrl}
